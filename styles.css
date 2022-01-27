@@ -1,0 +1,281 @@
+:root {
+    background-color: hsl(185, 41%, 84%);
+    font-family: 'Space Mono', monospace;
+    font-size: 24px;
+    padding: 0;
+    margin: 0;
+}
+input#dollar-amount-field, input#num-of-people, input#custom-option {
+    border: none;
+    height: 46px;
+    border-radius: 5px;
+    font-family: 'Space Mono', monospace;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: right;
+    color: hsl(183, 100%, 15%);
+    background-color: hsl(189, 41%, 97%);
+    margin-bottom: 20px;
+  }
+  input#dollar-amount-field {
+    background: url(./icon-dollar.svg) no-repeat 11px 17px;
+    background-color: hsl(189, 41%, 97%);
+  }
+  input#num-of-people {
+    background: url(./icon-person.svg) no-repeat 13px 16px;
+    background-color: hsl(189, 41%, 97%);
+    -moz-appearance: textfield;
+  }
+input:focus {
+    outline: 2px solid hsl(172, 67%, 45%);
+}
+input[type=number]#custom-option {
+    background-color: hsl(189, 41%, 97%);
+    color: hsl(183, 100%, 15%);
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    -moz-appearance: textfield;
+    margin-bottom: 0;
+    display: flex;
+    width: 100%;
+}
+input[type=number]#custom-option:focus {
+    outline: 2px solid hsl(172, 67%, 45%);
+}
+::placeholder {
+    color: hsl(183, 100%, 15%);
+    opacity: 1;
+    text-align: center;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+  border: none;
+  height: 46px;
+  border-radius: 5px;
+}
+body {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+div#app-container {
+    width: 375px;
+}
+h1 {
+    text-align: center;
+}
+h2#bill {
+    padding-top: 38px;
+}
+h2, h3 {
+    font-weight: 400;
+    font-size: 14px;
+    clear:right;
+}
+#dollar-amount-error-msg {
+    font-size: 13px;
+    color: red;
+    position: absolute;
+    left: 100px;
+    top: 48px;
+}
+#num-people-error-msg {
+    font-size: 13px;
+    color: red;
+    position: absolute;
+    left: 218px;
+    top: 405px;
+}
+#percentage-error-msg {
+    font-size: 13px;
+    color: red;
+    position: absolute;
+    left: 73px;
+    top: 172px;
+}
+#form-container {
+    width: 100%;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 15px 15px 0 0;
+    position: relative;
+}
+#tip-selection-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 8px;
+    margin-bottom: 40px;
+
+}
+#content-wrapper {
+    padding: 0 30px 10px;
+    position: relative;
+}
+#select-tip-heading {
+    grid-column: 1 / 3;
+}
+button {
+    border: none;
+    border-radius: 5px;
+    background-color: hsl(183, 100%, 15%);
+    color: hsl(0, 0%, 100%);
+    height: 48px;
+    font-family: 'Space Mono', monospace;
+    font-size: 24px;
+    font-weight: 400;
+
+}
+button:hover {
+    border: none;
+    border-radius: 5px;
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+    height: 48px;
+    font-family: 'Space Mono', monospace;
+    font-size: 24px;
+    font-weight: 400;
+}
+button:focus {
+    border: none;
+    border-radius: 5px;
+    background-color: hsl(173, 61%, 77%);
+    color: hsl(183, 100%, 15%);
+    height: 48px;
+    font-family: 'Space Mono', monospace;
+    font-size: 24px;
+    font-weight: 400;
+}
+#tip-totals-section {
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 10px;
+    padding: 46px 20px 24px;
+    margin-bottom: 25px;
+    position: relative;
+}
+#tip-totals-section h3 {
+    color: hsl(189, 41%, 97%);
+    margin: 0 auto -14px;
+}
+#tip-totals-section p {
+    font-size: 12px;
+    color: hsl(184, 14%, 56%);
+}
+#tip-totals-section button {
+    background-color:hsl(183, 79%, 23%);
+    color: hsl(183, 100%, 15%);
+    height: 48px;
+    width: 100%;
+    text-transform: uppercase;
+    margin-top: 25px;
+    font-size: 18px;
+    font-weight: 700;
+}
+#tip-totals-section button:hover {
+    background-color:hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+    height: 48px;
+    width: 100%;
+    text-transform: uppercase;
+    margin-top: 25px;
+    font-size: 18px;
+    font-weight: 700;
+}
+#tip-totals-section button:active {
+    background-color:hsl(173, 61%, 77%);
+    color: hsl(183, 100%, 15%);
+    height: 48px;
+    width: 100%;
+    text-transform: uppercase;
+    margin-top: 25px;
+    font-size: 18px;
+    font-weight: 700;
+} 
+.person-subheading {
+    margin-bottom: 22px;
+}
+#tip-per-person, #total-per-person {
+    color: hsl(172, 67%, 45%);
+    position: absolute;
+    right: 20px;
+}
+#tip-per-person {
+    top: 42px;
+}
+#total-per-person {
+    top:101px;
+
+}
+@media only screen and (min-width: 376px) {
+    input#dollar-amount-field, input#num-of-people {
+        width: 376px;
+    }
+    input#custom-option {
+        width:fit-content;
+    }
+    input#num-of-people {
+        margin-bottom: 52px;
+    }
+    body {
+        align-items: center;
+        margin-top: -97px;
+    }
+    div#app-container {
+        width: 920px;
+        height: 480px;
+    }
+    #form-container {
+        border-radius: 15px;
+    }
+    #content-wrapper {
+        padding: 0 30px;
+    }
+    #select-tip-heading {
+        grid-column: 1 / 4;
+    }
+    #tip-selection-section {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    #tip-selection-section {
+        width: 380px;
+    }
+    #tip-totals-section {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        width: 371px;
+        height: 350px;
+        padding:  62px 40px 0px;
+        margin-bottom: 0px;
+    }
+    .person-subheading {
+        margin-bottom: 60px;
+    }
+    #tip-totals-section button, #tip-totals-section button:hover, #tip-totals-section button:active {
+        margin-top: 114px;
+    }
+    #tip-per-person {
+        top: 62px;
+        font-size: 34px;
+    }
+    #total-per-person {
+        top: 155px;
+        font-size: 34px;
+    }
+    #tip-per-person, #total-per-person {
+        right: 40px;
+    }
+    #dollar-amount-error-msg {
+        left: 180px;
+    }
+    #num-people-error-msg {
+        left: 296px;
+        top: 348px;
+    }
+    #percentage-error-msg {
+        left: 155px;
+        top: 172px;
+    }
+}
