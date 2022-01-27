@@ -20,11 +20,13 @@ input#dollar-amount-field, input#num-of-people, input#custom-option {
   input#dollar-amount-field {
     background: url(./icon-dollar.svg) no-repeat 11px 17px;
     background-color: hsl(189, 41%, 97%);
+    width: 100%;
   }
   input#num-of-people {
     background: url(./icon-person.svg) no-repeat 13px 16px;
     background-color: hsl(189, 41%, 97%);
     -moz-appearance: textfield;
+    width: 100%;
   }
 input:focus {
     outline: 2px solid hsl(172, 67%, 45%);
@@ -62,7 +64,7 @@ body {
     height: 100vh;
 }
 div#app-container {
-    width: 375px;
+    width: 318px;
 }
 h1 {
     text-align: center;
@@ -76,24 +78,24 @@ h2, h3 {
     clear:right;
 }
 #dollar-amount-error-msg {
-    font-size: 13px;
+    font-size: 12px;
     color: red;
     position: absolute;
-    left: 100px;
-    top: 48px;
+    left: 70px;
+    top: 50px;
 }
 #num-people-error-msg {
-    font-size: 13px;
+    font-size: 12px;
     color: red;
     position: absolute;
-    left: 218px;
-    top: 405px;
+    left: 177px;
+    top: 407px;
 }
 #percentage-error-msg {
-    font-size: 13px;
+    font-size: 12px;
     color: red;
     position: absolute;
-    left: 73px;
+    left: 45px;
     top: 172px;
 }
 #form-container {
@@ -207,6 +209,25 @@ button:focus {
 #total-per-person {
     top:101px;
 
+}
+@media only screen and (min-width: 361px) {
+    div#app-container {
+        width: 375px;
+    }
+    #dollar-amount-error-msg {
+        font-size: 13px;
+        left: 100px;
+        top: 48px;
+    }
+    #num-people-error-msg {
+        font-size: 13px;
+        left: 218px;
+        top: 405px;
+    }
+    #percentage-error-msg {
+        font-size: 13px;
+        left: 73px;
+    }
 }
 @media only screen and (min-width: 415px) {
     input#dollar-amount-field, input#num-of-people {
