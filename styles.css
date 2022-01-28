@@ -20,6 +20,7 @@ input#dollar-amount-field, input#num-of-people, input#custom-option {
   input#dollar-amount-field {
     background: url(./icon-dollar.svg) no-repeat 11px 17px;
     background-color: hsl(189, 41%, 97%);
+    -moz-appearance: textfield;
     width: 100%;
   }
   input#num-of-people {
